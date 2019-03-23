@@ -1,5 +1,7 @@
 body {
-    background-color: blue;
+    background-image: url("/assets/img/burger_bg.jpg");
+    background-repeat: repeat;
+    color: #ffffff;
 }
 
 .burger-logo {
@@ -10,4 +12,23 @@ body {
 
 .header {
     text-align: center;
+    background-color: #335a40;
+    margin: 15px 450px 0 450px;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+}
+
+.burger-table {
+    background-color: #335a40;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 50%;
+}
+
+.create-form {
+    background-color: #335a40;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
 }
