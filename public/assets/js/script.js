@@ -5,9 +5,9 @@ $(document).ready(function() {
         var newBurger = $("#burger").val().trim();
         console.log(newBurger);
 
-        $.ajax("/api/burgers", {
+        $.ajax("/burgers/create", {
             type: "POST",
-            data: newBurger
+            data: {burger_name: newBurger}
         }).then(
             function() {
                 //console.log("created new cat");
