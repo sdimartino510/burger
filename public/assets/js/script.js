@@ -7,7 +7,9 @@ $(document).ready(function() {
 
         $.ajax("/burgers/create", {
             type: "POST",
-            data: {burger_name: newBurger}
+            data: {
+                burger_name: newBurger
+            }
         }).then(
             function() {
                 //console.log("created new cat");
