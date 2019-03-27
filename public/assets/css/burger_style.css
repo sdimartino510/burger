@@ -20,7 +20,7 @@ body {
 
 .burger-list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .burger-table {
@@ -28,7 +28,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-top: 15px;
-    width: 45%;
+    width: 48%;
     float: left;
 }
 
@@ -37,12 +37,12 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-top: 15px;
-    width: 45%;
+    width: 48%;
 }
 
 .create-form {
     background-color: #335a40;
-    padding: 10px;
+    padding: 10px 10px 35px 10px;
     border-radius: 10px;
     margin-top: 15px;
     font-weight: 700;
