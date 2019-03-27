@@ -12,8 +12,6 @@ $(document).ready(function() {
             }
         }).then(
             function() {
-                //console.log("created new cat");
-                // Reload the page to get the updated list
                 location.reload();
             }
         );

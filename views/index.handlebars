@@ -1,11 +1,31 @@
 <img class="burger-logo" src="/assets/img/burger.png">
 <h1 class="header">Burger Time!</h1>
 <div class="burger-table">
-    {{#each burger_data}}
-        <h4>
-            {{this.id}}: {{this.burger_name}}
-        </h4>
-    {{/each}}
+  <h2>Burgers to devour:</h2>
+  {{#each burger_data}}
+      <h4>
+        {{#unless this.devoured}}
+          {{this.id}}: {{this.burger_name}}
+          <form action="burgers/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            <button type="submit">Devour It!</button>
+          </form>
+        {{/unless}}
+      </h4>
+  {{/each}}
+</div>
+<div>
+  <h2>Burgers you have eaten:</h2>
+  {{#each burger_data}}
+    <h4>
+      {{#if this.devoured}}
+        {{this.id}}: {{this.burger_name}}
+        <form action="burgers/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+          <button type="submit">Devour It!</button>
+        </form>
+      {{/if}}
+    </h4>
 </div>
 <h2>Add a burger</h2>
 <form class="create-form">
@@ -15,6 +35,3 @@
     <input type="text" id="burger" name="name">
     <button id="submit" type="submit">Add Burger</button>
   </div>
-  
-</form>
-

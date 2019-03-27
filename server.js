@@ -2,10 +2,13 @@ var express = require("express");
 var PORT = process.env.PORT || 3000
 var app = express();
 var path = require("path");
+var methodOverride = require("method-override");
+var bodyParser = require("body-parser");
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('public'));
+app.use(methodOverride("_method"));
 
 var exphbs = require("express-handlebars");
 
