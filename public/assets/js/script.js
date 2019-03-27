@@ -16,4 +16,20 @@ $(document).ready(function() {
             }
         );
     })
+
+    $("#eat-it").on("click", function() {
+        event.preventDefault();
+
+        var burgerId = $(this).attr("data-id");
+        console.log(burgerId);
+
+        $.ajax({
+            method: "PUT",
+            url: "/burgers/" + burgerId
+        }).then(
+            function() {
+                location.reload();
+            }
+        );
+    })
 })

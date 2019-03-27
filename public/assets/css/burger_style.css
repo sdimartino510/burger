@@ -18,13 +18,26 @@ body {
     border-radius: 10px;
 }
 
+.burger-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .burger-table {
     background-color: #335a40;
     padding: 10px;
     border-radius: 10px;
     margin-top: 15px;
-    width: 50%;
-    /* display: inline; */
+    width: 45%;
+    float: left;
+}
+
+.burgers-eaten {
+    background-color: #335a40;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 45%;
 }
 
 .create-form {
