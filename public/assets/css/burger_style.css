@@ -1,6 +1,7 @@
 body {
     background-image: url("/assets/img/burger_bg.jpg");
     background-repeat: repeat;
+    background-color: #5a4033;
     color: #ffffff;
 }
 
